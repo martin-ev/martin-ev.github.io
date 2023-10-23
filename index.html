@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Martin Nicolas Everaert</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            font-family: "Lato", sans-serif;
+            font-weight: 200;
+        }
+
+        h1 {
+            letter-spacing: 0.5px;
+            font-size: 54px;
+        }
+
+        h2 {
+            letter-spacing: 0.5px;
+            font-size: 48px;
+        }
+
+        h3 {
+            font-size: 40px;
+        }
+
+        h4 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        a:link {
+            color: #52adc8;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #52adc8;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #52adc8;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        .w3-container {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    </style>
+</head>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-black w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+        <div class="w3-container w3-center">
+            <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+                title="close menu">
+                <i class="fa fa-remove"></i>
+            </a>
+            <img src="images/avatar.jpg" style="width:45%;" class="w3-round"><br><br>
+            <h1><b>Martin Nicolas Everaert</b></h1>
+            <p class="w3-text-grey">PhD student in EPFL - IVRL</p>
+
+        </div>
+        <p class="w3-bar-block">
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+                    class="fa fa-user fa-fw w3-margin-right"></i>About me</a>
+            <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+                    class="fa-solid fa-book fa-fw w3-margin-right"></i>Publications</a>
+            <a href="#academic" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
+                <i class="fa fa-envelope fa-fw w3-margin-right"></i>Academic activities</a>
+        </p>
+        <div class="w3-panel w3-xxxlarge w3-center">
+            <a href="https://www.linkedin.com/in/martin-everaert"><i
+                    class="fa-brands fa-linkedin-in fa-l w3-hover-opacity w3-black"></i></a>
+
+            <a href="https://x.com/EveraertMartin"><i
+                    class="fa-brands fa-x-twitter fa-l w3-hover-opacity w3-black"></i></a>
+
+            <a href="https://scholar.google.com/citations?user=1TDqUuwAAAAJ&hl=en"><i
+                    class="ai ai-google-scholar ai-l w3-hover-opacity w3-black"></i></a>
+
+            <br>
+
+            <a href="https://github.com/martin-ev"><i
+                    class="fa-brands fa-github fa-l w3-hover-opacity w3-black"></i></a>
+
+            <a href="https://www.youtube.com/@martin.e"><i
+                    class="fa-brands fa-youtube fa-l w3-hover-opacity w3-black"></i></a>
+        </div>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+
+        <!-- Top menu on small screens -->
+        <h1 class="w3-container w3-top w3-hide-large w3-black w3-xxlarge w3-padding"
+            style="height:80px; margin-top:0px; white-space: nowrap; overflow:hidden; text-overflow: clip;">
+            <a href="#"><img src="images/avatar.jpg" style="width:65px" class="w3-circle w3-right w3-hover-opacity"></a>
+            <span class="w3-hide-medium" style="font-size: clamp(20px, 7vw, 48px);">
+                <i class="fa fa-bars w3-hover-text-grey" onclick="w3_open()"></i>
+                <b>Martin N. Everaert</b>
+            </span>
+            <span class="w3-hide-small" style="font-size: clamp(36px, 7vw, 48px);">
+                <i class="fa fa-bars w3-hover-text-grey" onclick="w3_open()"></i>
+                <b>Martin Nicolas Everaert</b>
+            </span>
+        </h1>
+
+
+        <!-- About me -->
+        <div class="w3-container w3-center" style="margin-bottom:32px" id="about">
+
+            <div class="w3-container w3-hide-large" style="margin-top:80px">
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-col m2 w3-hide-small">
+                    <hr>
+                </div>
+                <div class="w3-col m8">
+                    <div class="w3-padding-large">
+
+                        <h2>About Me</h2>
+                        <p>I am currently a third-year PhD student in the <a href="https://www.epfl.ch/labs/ivrl/">Image
+                                and
+                                Visual Representation Lab (IVRL)</a> at EPFL. I am grateful to be supervised by my PhD
+                            advisor
+                            <a href="https://www.epfl.ch/labs/ivrl/people/susstrunk/">Prof. Dr. Sabine Süsstrunk</a> and
+                            my PhD co-advisor <a href="https://people.epfl.ch/radhakrishna.achanta?lang=en">Dr.
+                                Radhakrishna Achanta</a>.
+                        </p>
+                        <p> My research focuses on Computational Aesthetics, overlapping with Computation and Language,
+                            Computer
+                            Vision, Deep Learning, Generative Models, etc.</p>
+                    </div>
+                </div>
+                <div class="w3-col m2 w3-hide-small">
+                    <hr>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Publications -->
+        <div class="w3-container" style="margin-bottom:32px" id="publications">
+
+            <h2 class="w3-container w3-center">Publications</h2>
+
+            <div class="w3-container" style="margin-bottom:32px">
+
+                <h3 class="w3-container w3-center">Peer-reviewed publications</h3>
+
+                <div class="w3-container w3-padding-large">
+                    <div class="w3-col m5 w3-container" style="overflow: hidden;">
+                        <img src="images/8316e7a28a21af274ec78ae90fee4498.jpg"
+                            style="width: 230.5377139423%; margin: -1.4044930652% 0 -1.4044930652% -65.2688569712%; ">
+                    </div>
+                    <div class="w3-col m7 w3-container" style="padding-left: 8px; padding-right: 8px;">
+                        <h4 style="margin-top: 0px;">
+                            Exploiting the Signal-Leak Bias in Diffusion Models
+                        </h4>
+                        <a href=" https://arxiv.org/pdf/2309.15842.pdf"><i
+                                class="fa-regular fa-file-pdf w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
+                        <a href="https://arxiv.org/abs/2309.15842"><i
+                                class="ai ai-arxiv w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <a href="https://ivrl.github.io/signal-leak-bias/"><i
+                                class="fa-solid fa-link w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <p><b>M. N. Everaert</b>, A. Fitsios, M. Bocchio, S. Arpa, S. Süsstrunk, and R. Achanta.
+                            “Exploiting
+                            the Signal-Leak Bias in Diffusion Models”, <i>Accepted in WACV <span style="color:#52c8a3">2024</span> (round 1)</i>.</p>
+                    </div>
+                </div>
+
+                <div class="w3-container w3-padding-large">
+                    <div class="w3-col m5 w3-container" style="overflow: hidden;">
+                        <img src="images/d61f183ea03cba77a9c14042bc8a98db.jpg"
+                            style="width: 227.999997139%; margin: -11.3523972873% 0 -95.837903219% -110.6748785077%">
+                    </div>
+                    <div class="w3-col m7 w3-container" style="padding-left: 8px; padding-right: 8px;">
+                        <h4 style="margin-top: 0px;">
+                            VETIM: Expanding the Vocabulary of Text-to-Image Models only with Text
+                        </h4>
+                        <a href=" https://ivrl.github.io/vetim/"><i
+                                class="fa-solid fa-link w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <p><b>M. N. Everaert</b>, M. Bocchio, S. Arpa, S. Süsstrunk, and R. Achanta.
+                            “VETIM: Expanding the Vocabulary of Text-to-Image Models only with Text”, <i>Accepted in
+                                BMVC
+                                <span style="color:#52c8a3">2023</span></i>.</p>
+                    </div>
+                </div>
+
+                <div class="w3-container w3-padding-large">
+                    <div class="w3-col m5 w3-container" style="overflow: hidden;">
+                        <img src="images/935cb1454ee19e7010f7725988374883.jpg"
+                            style="width: 157.8274096359%; margin: 0% 0 0% -28.913704818%">
+                    </div>
+                    <div class="w3-col m7 w3-container" style="padding-left: 8px; padding-right: 8px;">
+                        <h4 style="margin-top: 0px;">
+                            Diffusion in Style
+                        </h4>
+                        <a
+                            href="
+                            https://openaccess.thecvf.com/content/ICCV2023/papers/Everaert_Diffusion_in_Style_ICCV_2023_paper.pdf">
+                            <i class="fa-regular fa-file-pdf w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
+                        <a
+                            href="https://openaccess.thecvf.com/content/ICCV2023/supplemental/Everaert_Diffusion_in_Style_ICCV_2023_supplemental.pdf"><i
+                                class="fa-regular fa-file-zipper w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <a href="https://ivrl.github.io/diffusion-in-style/static/pdfs/poster.pdf"><i
+                                class="fa-solid fa-chart-column w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <a href="https://www.youtube.com/watch?v=3Ge98E4x4JA"><i
+                                class="fa-brands fa-youtube w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <a href="https://ivrl.github.io/diffusion-in-style/"><i
+                                class="fa-solid fa-link w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <p><b>M. N. Everaert</b>, M. Bocchio, S. Arpa, S. Süsstrunk, and R. Achanta.
+                            “Diffusion in Style”, <i>ICCV <span style="color:#52c8a3">2023</span> + Patent PCT filed</i>.</p>
+                    </div>
+                </div>
+
+                <div class="w3-container w3-padding-large">
+                    <div class="w3-col m5 w3-container" style="overflow: hidden;">
+                        <img src="images/6433792c76bd817e427bfdaad8576414.jpg"
+                            style="width: 100%; margin: -39.610262002% 0 -28.391779996% 0%">
+                    </div>
+                    <div class="w3-col m7 w3-container" style="padding-left: 8px; padding-right: 8px;">
+                        <h4 style="margin-top: 0px;">
+                            Estimating Image Depth in the Comics Domain
+                        </h4>
+                        <a
+                            href="
+                            https://openaccess.thecvf.com/content/WACV2022/papers/Bhattacharjee_Estimating_Image_Depth_in_the_Comics_Domain_WACV_2022_paper.pdf">
+                            <i class="fa-regular fa-file-pdf w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
+                        <a
+                            href="https://openaccess.thecvf.com/content/WACV2022/supplemental/Bhattacharjee_Estimating_Image_Depth_WACV_2022_supplemental.pdf"><i
+                                class="fa-regular fa-file-zipper w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <a href="https://arxiv.org/abs/2110.03575"><i
+                                class="ai ai-arxiv w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <a href="https://drive.google.com/file/d/1OUb8k1b-0BvoTOKQxV4kJL5K3EVWvEDA/view"><i
+                                class="fa-solid fa-chart-column w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <a href="https://www.youtube.com/watch?v=8xotzQke4c0"><i
+                                class="fa-brands fa-youtube w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <a href="https://github.com/IVRL/ComicsDepth"><i
+                                class="fa-brands fa-github w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <a href="https://ivrl.github.io/ComicsDepth/"><i
+                                class="fa-solid fa-link w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <p>D. Bhattacharjee, <b>M. N. Everaert</b>, M. Salzmann, and S. Süsstrunk.
+                            “Estimating Image Depth in the Comics Domain”, <i>WACV <span style="color:#52c8a3">2022</span></i>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-container" style="margin-bottom:32px">
+                <h3 class="w3-container w3-center">Other works</h3>
+
+                <div class="w3-container w3-padding-large">
+                    <div class="w3-col m5 w3-container" style="overflow: hidden;">
+                        <img src="images/0a6b2721e5325c4052f2e65fa9df8bcd.jpg"
+                            style="width: 100%; margin: -2.1280189773% 0 -7.771499993% 0%">
+                    </div>
+                    <div class="w3-col m7 w3-container" style="padding-left: 8px; padding-right: 8px;">
+                        <h4 style="margin-top: 0px;">
+                            Aesthetics-Oriented Video Generation and Editing
+                        </h4>
+                        <a href=" https://infoscience.epfl.ch/record/298850/files/Writeup.pdf"><i
+                                class="fa-regular fa-file-pdf w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
+                        <a href="https://memento.epfl.ch/event/aesthetics-oriented-video-generation-and-editing/"><i
+                                class="fa-regular fa-calendar-days w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
+                        <p><b>M. N. Everaert</b>.
+                            “Aesthetics-Oriented Video Generation and Editing”, <i>EDIC research proposal</i>, <span style="color:#52c8a3">2022</span>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-container w3-padding-large">
+                    <div class="w3-col m5 w3-container" style="overflow: hidden;">
+                        <img src="images/8e74911795c5b5ed62bf6a71e5bd4929.jpg"
+                            style="width: 100%; margin: -5.8579985061% 0 -5.4242643556% 0%">
+                    </div>
+                    <div class="w3-col m7 w3-container" style="padding-left: 8px; padding-right: 8px;">
+                        <h4 style="margin-top: 0px;">
+                            Scene relighting with illumination estimation in the latent space on an encoder-decoder
+                            scheme
+                        </h4>
+                        <a href="
+                    https://arxiv.org/pdf/2006.02333.pdf">
+                            <i class="fa-regular fa-file-pdf w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
+                        <a href="https://arxiv.org/abs/2006.02333"><i
+                                class="ai ai-arxiv w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <a href="https://raw.githubusercontent.com/martin-ev/2DSceneRelighting/master/slides.pdf"><i
+                                class="fa-regular fa-file-powerpoint w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <a href="https://github.com/martin-ev/2DSceneRelighting"><i
+                                class="fa-brands fa-github w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                        <p style="margin-bottom: 0px;">A. P. Dherse*, <b>M. N. Everaert</b>*, and J. J. Gwizdała*.
+                            “Scene relighting with illumination estimation in the latent space on an encoder-decoder
+                            scheme”, <i>arXiv preprint arXiv:2006.02333</i>, <span style="color:#52c8a3">2020</span>.</p>
+                        <p style="font-size: 12px; text-align: right; margin-top: 0px;">* equal contribution</p>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- About me -->
+            <div class="w3-container large w3-center" style="margin-bottom:32px" id="academic">
+
+                <div class="w3-row">
+                    <div class="w3-col m2 w3-hide-small">
+                        <hr>
+                    </div>
+                    <div class="w3-col m8">
+                        <div class="w3-padding-large">
+
+                            <h2>Academic activities</h2>
+
+                            <div class="w3-padding-large">
+
+                                <h3>Conferences</h3>
+
+                                <p>Social media Chair of ICCP <span style="color:#52c8a3">2024</span>: <a
+                                        href="https://x.com/ICCP_conference">@ICCP_conference</a></p>
+
+                                <p>Reviewer for ICCV <span style="color:#52c8a3">2023</span></p>
+
+                                <p>Emergency reviewer for BMVC <span style="color:#52c8a3">2023</span></p>
+
+                            </div>
+
+                            <div class="w3-padding-large">
+
+                                <h3>Teaching</h3>
+
+                                <p>Teaching assistant for <a href="https://rgl.epfl.ch/courses/NMVC21">CS-328: Numerical
+                                        Methods for Visual Computing and Machine Learning</a>, taught by Prof. Wenzel
+                                    Jakob: <span style="color:#52c8a3">Fall 2021</span>, <span style="color:#52c8a3">Fall 2023</span></p>
+
+                                <p>Teaching assistant for <a
+                                        href="https://edu.epfl.ch/coursebook/en/computational-photography-CS-413">CS-413:
+                                        Computational Photography</a>, taught by Prof. Sabine Süsstrunk: <span style="color:#52c8a3">Spring 2022</span>,
+                                        <span style="color:#52c8a3">Spring 2023</span></p>
+
+                            </div>
+
+                            <div class="w3-padding-large">
+
+                                <h3>Student supervision</h3>
+
+                                <p>Project ideas designed by me. Projects carried out by undergraduate (BS/MS) students:
+                                </p>
+
+                                <ul class="w3-left-align w3-padding">
+                                    <li>
+                                        <p>1 BS student. “Feed-Forward Guidance for Text-to-Image Diffusion Models”,
+                                            Bachelor semester project, <span style="color:#52c8a3">Fall 2023 (ongoing)</span>, <a
+                                                href="https://www.epfl.ch/labs/ivrl/available-projects/">project
+                                                description</a>.</p>
+                                    </li>
+                                    <li>
+                                        <p>1 MS student. “Generating stories from keywords”, Master semester project,
+                                            <span style="color:#52c8a3">Spring 2023</span>, <a
+                                                href="https://www.epfl.ch/labs/ivrl/available-projects-spring2023/">project
+                                                description</a>.</p>
+                                    </li>
+                                    <li>
+                                        <p>1 BS student. “Coreference resolution for story visualization”, Bachelor
+                                            semester project, <span style="color:#52c8a3">Spring 2023</span>, <a
+                                                href="https://www.epfl.ch/labs/ivrl/available-projects-spring2023/">project
+                                                description</a>.</p>
+                                    </li>
+                                    <li>
+                                        <p>1 team of 3 MS students. “Aesthetics of sets of images”, CS-413 project,
+                                            <span style="color:#52c8a3">Spring 2023</span>.</p>
+                                    </li>
+                                    <li>
+                                        <p>1 team of 3 MS students + 1 team of 2 MS students. “TimeWarp: How would this
+                                            scene look in 100 years?”, CS-413 project, <span style="color:#52c8a3">Spring 2023</span>.</p>
+                                    </li>
+                                    <li>
+                                        <p>2 teams of 3 MS students. “Text to Photomosaic”, CS-413 project, 
+                                            <span style="color:#52c8a3">Spring 2023</span>.</p>
+                                    </li>
+                                    <li>
+                                        <p>1 team of 3 MS students. “From RGB to NIR with Style Transfer”, CS-413 project, 
+                                            <span style="color:#52c8a3">Spring 2023</span>.</p>
+                                    </li>
+                                    <li>
+                                        <p>1 MS student. “Generate images from texts”, Master
+                                            semester project, <span style="color:#52c8a3">Fall 2022</span>, <a
+                                                href="https://www.epfl.ch/labs/ivrl/available-projects-fall-2022/">project
+                                                description</a>.</p>
+                                    </li>
+                                    <li>
+                                        <p>1 BS student. “Is this video an ad?”, Bachelor
+                                            semester project, <span style="color:#52c8a3">Fall 2022</span>, <a
+                                                href="https://www.epfl.ch/labs/ivrl/available-projects-fall-2022/">project
+                                                description</a>.</p>
+                                    </li>
+                                    <li>
+                                        <p>1 team of 3 MS students. "Predicting if two frames are part of the same video",
+                                            ML4Science project, <span style="color:#52c8a3">Fall 2022</span>.</p>
+                                    </li>
+                                    <li>
+                                        <p>1 team of 3 MS students. “Improving an open-source microscope by adding multispectral imagery”, CS-413 project, 
+                                            <span style="color:#52c8a3">Spring 2022</span>, <a
+                                            href="files/CS413_2022_Martin.pdf">project
+                                            description</a>.</p>
+                                    </li>
+                                    <li>
+                                        <p>2 teams of 3 MS students. “Low-level image transformations for image aesthetics”, CS-413 project, 
+                                            <span style="color:#52c8a3">Spring 2022</span>, <a
+                                            href="files/CS413_2022_Martin.pdf">project
+                                            description</a>.</p>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+
+                        </div>
+                        <div class="w3-col m2 w3-hide-small">
+                            <hr>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="w3-black w3-center w3-padding-24">Martin Nicolas Everaert<br> Designed with <a
+                        href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+                        class="w3-hover-opacity">w3.css</a></div>
+
+                <!-- End page content -->
+            </div>
+
+            <script>
+                // Script to open and close sidebar
+                function w3_open() {
+                    document.getElementById("mySidebar").style.display = "block";
+                    document.getElementById("myOverlay").style.display = "block";
+                }
+
+                function w3_close() {
+                    document.getElementById("mySidebar").style.display = "none";
+                    document.getElementById("myOverlay").style.display = "none";
+                }
+            </script>
+
+</body>
+
+</html>
