@@ -142,6 +142,40 @@
             padding-left: 0px;
             padding-right: 0px;
         }
+
+        .collapsible {
+            background-color: #f1f1f1;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 20px;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: #e3e3e3;
+        }
+
+        .collapsible:after {
+            content: '+ More';
+            color: black;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "- Less";
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+        }
     </style>
 </head>
 
@@ -164,7 +198,7 @@
             <a href="#academic" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
                 <i class="fa fa-envelope fa-fw w3-margin-right"></i>Academic activities</a>
         </p>
-        
+
         <div class="w3-panel w3-xxlarge w3-center">
             <a href="https://www.linkedin.com/in/martin-everaert"><i
                     class="fa-brands fa-linkedin-in fa-l w3-hover-opacity w3-black"></i></a>
@@ -223,17 +257,63 @@
                     <div class="w3-padding-large">
 
                         <h2>About Me</h2>
-                        <p>I am currently a third-year PhD student in the <a href="https://www.epfl.ch/labs/ivrl/">Image
+
+                        <button class="collapsible">
+                            <p>Third-year PhD candidate in the Image
                                 and
-                                Visual Representation Lab (IVRL)</a> at EPFL. I am grateful to be supervised by my PhD
-                            advisor
-                            <a href="https://www.epfl.ch/labs/ivrl/people/susstrunk/">Prof. Dr. Sabine Süsstrunk</a> and
-                            my PhD co-advisor <a href="https://people.epfl.ch/radhakrishna.achanta?lang=en">Dr.
-                                Radhakrishna Achanta</a>.
-                        </p>
-                        <p> My research focuses on Computational Aesthetics, overlapping with Computation and Language,
-                            Computer
-                            Vision, Deep Learning, Generative Models, etc.</p>
+                                Visual Representation Lab (IVRL) at EPFL </p>
+                            <p>Research: Computer Vision and Generative AI, focus on
+                                Text-to-Image Diffusion Models</p>
+                        </button>
+                        <div class="content">
+                            <p>I am currently a third-year PhD candidate in the <a
+                                    href="https://www.epfl.ch/labs/ivrl/">Image
+                                    and
+                                    Visual Representation Lab (IVRL) at EPFL</a>. I am grateful to be supervised by my
+                                PhD
+                                advisor
+                                <a href="https://www.epfl.ch/labs/ivrl/people/susstrunk/">Prof. Dr. Sabine Süsstrunk</a>
+                                and
+                                my PhD co-advisor <a href="https://people.epfl.ch/radhakrishna.achanta?lang=en">Dr.
+                                    Radhakrishna Achanta</a>.
+                            </p>
+                            <p> I am interested in Computational Aesthetics, overlapping with Computation and Language,
+                                Computer Vision, Deep Learning, Generative Models, etc. My research focuses on Computer
+                                Vision
+                                and Generative AI, with a specific focus on Text-to-Image Diffusion Models.
+                            </p>
+                            <p> Prior to pursuing my PhD, I completed a <a
+                                    href="https://www.epfl.ch/schools/ic/">Master's
+                                    in Computer Science at EPFL</a> in 2021.
+                                I also hold a <a
+                                    href="https://en.wikipedia.org/wiki/Dipl%C3%B4me_d%27Ing%C3%A9nieur">Diplôme
+                                    d'Ingénieur</a> (engineering BS/MS degree) from the <a
+                                    href="https://en.wikipedia.org/wiki/Sup%C3%A9lec">Supélec curriculum</a> at
+                                <a href="https://en.wikipedia.org/wiki/CentraleSup%C3%A9lec">CentraleSupélec</a>,
+                                graduating
+                                concurrently in 2021, and a BS degree in Fundamental Physics
+                                from <a href="https://en.wikipedia.org/wiki/Paris-Sud_University">Université
+                                    Paris-Sud</a>
+                                in 2018.
+                                Before that, I attended <a
+                                    href="https://en.wikipedia.org/wiki/Lyc%C3%A9e_Saint-Louis">Lycée
+                                    Saint Louis</a>, where I pursued <a
+                                    href="https://en.wikipedia.org/wiki/Classe_pr%C3%A9paratoire_aux_grandes_%C3%A9coles">French
+                                    preparatory classes
+                                    (CPGE)</a>, with a focus on Math, Physics, Engineering and Computer Science
+                                (MPSI/MP*).
+                                Throughout my studies, I also interned at <a
+                                    href="https://en.wikipedia.org/wiki/Thales_Group">Thales Group</a> (Master's thesis
+                                project, 2021), <a
+                                    href="https://en.wikipedia.org/wiki/French_Alternative_Energies_and_Atomic_Energy_Commission">CEA</a>
+                                (Engineering internship, 2019), and <a
+                                    href="https://en.wikipedia.org/wiki/TCL_Technology">TCL Corporation</a> (1-month
+                                Work/Labor internship in
+                                Chengdu, China, 2018).
+                            </p>
+                        </div>
+
+
                     </div>
                 </div>
                 <div class="w3-col m2 w3-hide-small">
@@ -272,15 +352,15 @@
                         <a href="https://drive.google.com/file/d/1DA33jfjqFyUCMaQ4u16BFZ8ypXCOGMYi/view"><i
                                 class="fa-brands fa-youtube w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
                         <a href="https://arxiv.org/abs/2309.15842"><i
-                                class="ai ai-arxiv w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>                 
+                                class="ai ai-arxiv w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
                         <a href="https://github.com/IVRL/signal-leak-bias"><i
                                 class="fa-brands fa-github w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
                         <a href="https://ivrl.github.io/signal-leak-bias/"><i
-                                class="fa-solid fa-link w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>       
+                                class="fa-solid fa-link w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
                         <p><b>M. N. Everaert</b>, A. Fitsios, M. Bocchio, S. Arpa, S. Süsstrunk, and R. Achanta.
                             “Exploiting
-                            the Signal-Leak Bias in Diffusion Models”, <i>Accepted in WACV <span
-                                    style="color:#52c8a3">2024</span> (round 1)</i>.</p>
+                            the Signal-Leak Bias in Diffusion Models”, <i>WACV <span style="color:#52c8a3">2024</span>
+                                (accepted in round 1)</i>.</p>
                     </div>
                 </div>
 
@@ -293,12 +373,10 @@
                         <h4 style="margin-top: 0px;">
                             VETIM: Expanding the Vocabulary of Text-to-Image Models only with Text
                         </h4>
-                        <a
-                            href="
+                        <a href="
                             https://papers.bmvc2023.org/0016.pdf">
                             <i class="fa-regular fa-file-pdf w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
-                        <a
-                            href="https://bmvc2022.mpi-inf.mpg.de/BMVC2023/0016_supp.zip"><i
+                        <a href="https://bmvc2022.mpi-inf.mpg.de/BMVC2023/0016_supp.zip"><i
                                 class="fa-regular fa-file-zipper w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
                         <a href="https://ivrl.github.io/vetim/static/BMVC%20poster.pdf"><i
                                 class="fa-solid fa-chart-column w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
@@ -446,9 +524,11 @@
                             <p>Social media Chair of ICCP <span style="color:#52c8a3">2024</span>: <a
                                     href="https://x.com/ICCP_conference">@ICCP_conference</a></p>
 
-                            <p>Reviewer + emergency reviewer for ECCV <span style="color:#52c8a3">2024</span> (2 reviews, 1 emergency review)</p>
+                            <p>Reviewer + emergency reviewer for ECCV <span style="color:#52c8a3">2024</span> (2
+                                reviews, 1 emergency review)</p>
 
-                            <p>Emergency reviewer for BMVC <span style="color:#52c8a3">2023</span> (9 emergency reviews)</p>
+                            <p>Emergency reviewer for BMVC <span style="color:#52c8a3">2023</span> (9 emergency reviews)
+                            </p>
 
                             <p>Reviewer for ICCV <span style="color:#52c8a3">2023</span> (1 review)</p>
 
@@ -458,8 +538,8 @@
 
                             <h3>Teaching</h3>
 
-                            <p>Teaching assistant Award from <a
-                                    href="https://www.epfl.ch/schools/ic/">EPFL School of Computer and Communication Sciences (IC)</a>, for teaching excellence,
+                            <p>Teaching assistant Award from <a href="https://www.epfl.ch/schools/ic/">EPFL School of
+                                    Computer and Communication Sciences (IC)</a>, for teaching excellence,
                                 <span style="color:#52c8a3">2023</span>
                             </p>
 
@@ -489,8 +569,7 @@
                                 <li>
                                     <p>1 BS student. “Feed-Forward Guidance for Text-to-Image Diffusion Models”,
                                         Bachelor semester project, <span style="color:#52c8a3">Fall 2023
-                                            </span>, <a
-                                            href="https://www.epfl.ch/labs/ivrl/available-projects/">project
+                                        </span>, <a href="https://www.epfl.ch/labs/ivrl/available-projects/">project
                                             description</a>.</p>
                                 </li>
                                 <li>
@@ -590,6 +669,22 @@
         function w3_close() {
             document.getElementById("mySidebar").style.display = "none";
             document.getElementById("myOverlay").style.display = "none";
+        }
+    </script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
         }
     </script>
 
