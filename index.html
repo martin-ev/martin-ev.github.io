@@ -154,15 +154,33 @@
         }
 
         .active,
+
         .collapsible:hover {
             background-color: #e3e3e3;
         }
 
+        .collapsiblecenter:hover {
+            text-decoration: underline;
+        }
+
+
         .collapsible:after {
             content: '+ More';
             color: black;
+            margin-left: 0px;
+        }
+
+        .collapsible28:after {
+            font-size: 28px;
+        }
+
+
+        .collapsiblecenter:after {
+            float: center;
+        }
+
+        .collapsibleright:after {
             float: right;
-            margin-left: 5px;
         }
 
         .active:after {
@@ -170,7 +188,7 @@
         }
 
         .content {
-            padding: 0 18px;
+            padding: 0 0px;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.2s ease-out;
@@ -258,18 +276,20 @@
 
                         <h2>About Me</h2>
 
-                        <button class="collapsible">
-                            <p>Third-year PhD candidate in the Image
+                        <p>Third-year PhD candidate in the <a href="https://www.epfl.ch/labs/ivrl/">Image
                                 and
-                                Visual Representation Lab (IVRL) at EPFL </p>
-                            <p>Research: Computer Vision and Generative AI, focus on
-                                Text-to-Image Diffusion Models</p>
+                                Visual Representation Lab</a> at <a href="https://www.epfl.ch/">EPFL</a> </p>
+                        <p>Research: Computer Vision and Generative AI, focus on
+                            Text-to-Image Diffusion Models</p>
+
+                        <button class="collapsible collapsiblecenter collapsible28">
                         </button>
                         <div class="content">
                             <p>I am currently a third-year PhD candidate in the <a
                                     href="https://www.epfl.ch/labs/ivrl/">Image
                                     and
-                                    Visual Representation Lab (IVRL) at EPFL</a>. I am grateful to be supervised by my
+                                    Visual Representation Lab (IVRL)</a> at <a href="https://www.epfl.ch/">EPFL</a>. I
+                                am grateful to be supervised by my
                                 PhD
                                 advisor
                                 <a href="https://www.epfl.ch/labs/ivrl/people/susstrunk/">Prof. Dr. Sabine Süsstrunk</a>
@@ -283,17 +303,18 @@
                             </p>
                             <p> Prior to pursuing my PhD, I completed a <a
                                     href="https://www.epfl.ch/schools/ic/">Master's
-                                    in Computer Science at EPFL</a> in 2021.
+                                    in Computer Science at EPFL</a> in <span style="color:#52c8a3">2021</span>.
                                 I also hold a <a
                                     href="https://en.wikipedia.org/wiki/Dipl%C3%B4me_d%27Ing%C3%A9nieur">Diplôme
                                     d'Ingénieur</a> (engineering BS/MS degree) from the <a
                                     href="https://en.wikipedia.org/wiki/Sup%C3%A9lec">Supélec curriculum</a> at
                                 <a href="https://en.wikipedia.org/wiki/CentraleSup%C3%A9lec">CentraleSupélec</a>,
                                 graduating
-                                concurrently in 2021, and a BS degree in Fundamental Physics
+                                concurrently in <span style="color:#52c8a3">2021</span>, and a BS degree in Fundamental
+                                Physics
                                 from <a href="https://en.wikipedia.org/wiki/Paris-Sud_University">Université
                                     Paris-Sud</a>
-                                in 2018.
+                                in <span style="color:#52c8a3">2018</span>.
                                 Before that, I attended <a
                                     href="https://en.wikipedia.org/wiki/Lyc%C3%A9e_Saint-Louis">Lycée
                                     Saint Louis</a>, where I pursued <a
@@ -303,12 +324,12 @@
                                 (MPSI/MP*).
                                 Throughout my studies, I also interned at <a
                                     href="https://en.wikipedia.org/wiki/Thales_Group">Thales Group</a> (Master's thesis
-                                project, 2021), <a
+                                project, <span style="color:#52c8a3">2021</span>), <a
                                     href="https://en.wikipedia.org/wiki/French_Alternative_Energies_and_Atomic_Energy_Commission">CEA</a>
-                                (Engineering internship, 2019), and <a
+                                (Engineering internship, <span style="color:#52c8a3">2019</span>), and <a
                                     href="https://en.wikipedia.org/wiki/TCL_Technology">TCL Corporation</a> (1-month
                                 Work/Labor internship in
-                                Chengdu, China, 2018).
+                                Chengdu, China, <span style="color:#52c8a3">2018</span>).
                             </p>
                         </div>
 
@@ -330,17 +351,22 @@
 
             <div class="w3-container" style="margin-bottom:32px">
 
-                <h3 class="w3-container w3-center">Peer-reviewed publications</h3>
-
                 <div class="w3-container w3-padding-large">
                     <div class="w3-col m5 w3-container" style="overflow: hidden;">
-                        <img src="images/8316e7a28a21af274ec78ae90fee4498.jpg"
-                            style="width: 230.5377139423%; margin: -1.4044930652% 0 -1.4044930652% -65.2688569712%; ">
+                        <a href="https://ivrl.github.io/signal-leak-bias/" style="color: black; text-decoration: none">
+                            <img src="images/8316e7a28a21af274ec78ae90fee4498.jpg" style="width: 100%; "
+                                class="w3-opacity-min w3-hover-opacity-off">
+                        </a>
                     </div>
                     <div class="w3-col m7 w3-container" style="padding-left: 8px; padding-right: 8px;">
-                        <h4 style="margin-top: 0px;">
-                            Exploiting the Signal-Leak Bias in Diffusion Models
-                        </h4>
+                        <a href="https://ivrl.github.io/signal-leak-bias/" style="color: black; text-decoration: none">
+                            <h4 style="margin-top: 0px;">
+                                Exploiting the Signal-Leak Bias in Diffusion Models <span
+                                    style="font-size: 20px; vertical-align: middle;">[WACV <span
+                                        style="color:#52c8a3">2024</span>]</span>
+                            </h4>
+                        </a>
+
                         <a href=" https://arxiv.org/pdf/2309.15842.pdf"><i
                                 class="fa-regular fa-file-pdf w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
                         <a
@@ -358,20 +384,27 @@
                                 class="fa-solid fa-link w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
                         <p><b>M. N. Everaert</b>, A. Fitsios, M. Bocchio, S. Arpa, S. Süsstrunk, and R. Achanta.
                             “Exploiting
-                            the Signal-Leak Bias in Diffusion Models”, <i>WACV <span style="color:#52c8a3">2024</span>
-                                (accepted in round 1)</i>.</p>
+                            the Signal-Leak Bias in Diffusion Models”, <i>WACV <span
+                                    style="color:#52c8a3">2024</span></i>.
+                            (accepted in round 1)</p>
                     </div>
                 </div>
 
                 <div class="w3-container w3-padding-large">
                     <div class="w3-col m5 w3-container" style="overflow: hidden;">
-                        <img src="images/d61f183ea03cba77a9c14042bc8a98db.jpg"
-                            style="width: 227.999997139%; margin: -11.3523972873% 0 -95.837903219% -110.6748785077%">
+                        <a href="https://ivrl.github.io/vetim/" style="color: black; text-decoration: none">
+                            <img src="images/d61f183ea03cba77a9c14042bc8a98db.jpg" style="width: 100%"
+                                class="w3-opacity-min w3-hover-opacity-off">
+                        </a>
                     </div>
                     <div class="w3-col m7 w3-container" style="padding-left: 8px; padding-right: 8px;">
-                        <h4 style="margin-top: 0px;">
-                            VETIM: Expanding the Vocabulary of Text-to-Image Models only with Text
-                        </h4>
+                        <a href="https://ivrl.github.io/vetim/" style="color: black; text-decoration: none">
+                            <h4 style="margin-top: 0px;">
+                                VETIM: Expanding the Vocabulary of Text-to-Image Models only with Text <span
+                                    style="font-size: 20px; vertical-align: middle;">[BMVC <span
+                                        style="color:#52c8a3">2023</span>]</span>
+                            </h4>
+                        </a>
                         <a href="
                             https://papers.bmvc2023.org/0016.pdf">
                             <i class="fa-regular fa-file-pdf w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
@@ -381,23 +414,30 @@
                                 class="fa-solid fa-chart-column w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
                         <a href="https://bmvc2022.mpi-inf.mpg.de/BMVC2023/0016_video.mp4"><i
                                 class="fa-brands fa-youtube w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
-                        <a href=" https://ivrl.github.io/vetim/"><i
+                        <a href="https://ivrl.github.io/vetim/"><i
                                 class="fa-solid fa-link w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
                         <p><b>M. N. Everaert</b>, M. Bocchio, S. Arpa, S. Süsstrunk, and R. Achanta.
-                            “VETIM: Expanding the Vocabulary of Text-to-Image Models only with Text”, <i>BMVC
-                                <span style="color:#52c8a3">2023</span></i>.</p>
+                            “VETIM: Expanding the Vocabulary of Text-to-Image Models only with Text”, <i>BMVC <span
+                                    style="color:#52c8a3">2023</span></i>.</p>
                     </div>
                 </div>
 
                 <div class="w3-container w3-padding-large">
                     <div class="w3-col m5 w3-container" style="overflow: hidden;">
-                        <img src="images/935cb1454ee19e7010f7725988374883.jpg"
-                            style="width: 157.8274096359%; margin: 0% 0 0% -28.913704818%">
+                        <a href="https://ivrl.github.io/diffusion-in-style/"
+                            style="color: black; text-decoration: none">
+                            <img src="images/935cb1454ee19e7010f7725988374883.jpg" style="width: 100%"
+                                class="w3-opacity-min w3-hover-opacity-off">
+                        </a>
                     </div>
                     <div class="w3-col m7 w3-container" style="padding-left: 8px; padding-right: 8px;">
-                        <h4 style="margin-top: 0px;">
-                            Diffusion in Style
-                        </h4>
+                        <a href="https://ivrl.github.io/diffusion-in-style/"
+                            style="color: black; text-decoration: none">
+                            <h4 style="margin-top: 0px;">
+                                Diffusion in Style <span style="font-size: 20px; vertical-align: middle;">[ICCV <span
+                                        style="color:#52c8a3">2023</span> + Patent PCT filed]</span>
+                            </h4>
+                        </a>
                         <a
                             href="
                             https://openaccess.thecvf.com/content/ICCV2023/papers/Everaert_Diffusion_in_Style_ICCV_2023_paper.pdf">
@@ -414,18 +454,25 @@
                         <p><b>M. N. Everaert</b>, M. Bocchio, S. Arpa, S. Süsstrunk, and R. Achanta.
                             “Diffusion in Style”, <i>ICCV <span style="color:#52c8a3">2023</span> + Patent PCT
                                 filed</i>.</p>
+                        </p>
                     </div>
                 </div>
 
                 <div class="w3-container w3-padding-large">
                     <div class="w3-col m5 w3-container" style="overflow: hidden;">
-                        <img src="images/6433792c76bd817e427bfdaad8576414.jpg"
-                            style="width: 100%; margin: -39.610262002% 0 -28.391779996% 0%">
+                        <a href="https://ivrl.github.io/ComicsDepth/" style="color: black; text-decoration: none">
+                            <img src="images/6433792c76bd817e427bfdaad8576414.jpg" style="width: 100%;"
+                                class="w3-opacity-min w3-hover-opacity-off">
+                        </a>
                     </div>
                     <div class="w3-col m7 w3-container" style="padding-left: 8px; padding-right: 8px;">
-                        <h4 style="margin-top: 0px;">
-                            Estimating Image Depth in the Comics Domain
-                        </h4>
+                        <a href="https://ivrl.github.io/ComicsDepth/" style="color: black; text-decoration: none">
+                            <h4 style="margin-top: 0px;">
+                                Estimating Image Depth in the Comics Domain <span
+                                    style="font-size: 20px; vertical-align: middle;">[WACV <span
+                                        style="color:#52c8a3">2022</span>]</span>
+                            </h4>
+                        </a>
                         <a
                             href="
                             https://openaccess.thecvf.com/content/WACV2022/papers/Bhattacharjee_Estimating_Image_Depth_in_the_Comics_Domain_WACV_2022_paper.pdf">
@@ -445,59 +492,72 @@
                                 class="fa-solid fa-link w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
                         <p>D. Bhattacharjee, <b>M. N. Everaert</b>, M. Salzmann, and S. Süsstrunk.
                             “Estimating Image Depth in the Comics Domain”, <i>WACV <span
-                                    style="color:#52c8a3">2022</span></i>.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w3-container" style="margin-bottom:32px">
-                <h3 class="w3-container w3-center">Other works</h3>
-
-                <div class="w3-container w3-padding-large">
-                    <div class="w3-col m5 w3-container" style="overflow: hidden;">
-                        <img src="images/0a6b2721e5325c4052f2e65fa9df8bcd.jpg"
-                            style="width: 100%; margin: -2.1280189773% 0 -7.771499993% 0%">
-                    </div>
-                    <div class="w3-col m7 w3-container" style="padding-left: 8px; padding-right: 8px;">
-                        <h4 style="margin-top: 0px;">
-                            Aesthetics-Oriented Video Generation and Editing
-                        </h4>
-                        <a href=" https://infoscience.epfl.ch/record/298850/files/Writeup.pdf"><i
-                                class="fa-regular fa-file-pdf w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
-                        <a href="https://memento.epfl.ch/event/aesthetics-oriented-video-generation-and-editing/"><i
-                                class="fa-regular fa-calendar-days w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
-                        <p><b>M. N. Everaert</b>.
-                            “Aesthetics-Oriented Video Generation and Editing”, <i>EDIC research proposal</i>, <span
-                                style="color:#52c8a3">2022</span>.
+                                    style="color:#52c8a3">2022</span></i>.
                         </p>
                     </div>
                 </div>
 
-                <div class="w3-container w3-padding-large">
-                    <div class="w3-col m5 w3-container" style="overflow: hidden;">
-                        <img src="images/8e74911795c5b5ed62bf6a71e5bd4929.jpg"
-                            style="width: 100%; margin: -5.8579985061% 0 -5.4242643556% 0%">
+                <button class="collapsible collapsiblecenter collapsible28">
+                </button>
+                <div class="content">
+                    <div class="w3-container w3-padding-large">
+                        <div class="w3-col m5 w3-container" style="overflow: hidden;">
+                            <a href="https://infoscience.epfl.ch/record/298850/"
+                                style="color: black; text-decoration: none">
+                                <img src="images/0a6b2721e5325c4052f2e65fa9df8bcd.jpg" style="width: 100%;"
+                                    class="w3-opacity-min w3-hover-opacity-off">
+                            </a>
+                        </div>
+                        <div class="w3-col m7 w3-container" style="padding-left: 8px; padding-right: 8px;">
+                            <a href="https://infoscience.epfl.ch/record/298850/"
+                                style="color: black; text-decoration: none">
+                                <h4 style="margin-top: 0px;">
+                                    Aesthetics-Oriented Video Generation and Editing
+                                </h4>
+                            </a>
+                            <a href=" https://infoscience.epfl.ch/record/298850/files/Writeup.pdf"><i
+                                    class="fa-regular fa-file-pdf w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
+                            <a href="https://memento.epfl.ch/event/aesthetics-oriented-video-generation-and-editing/"><i
+                                    class="fa-regular fa-calendar-days w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
+                            <p><b>M. N. Everaert</b>.
+                                “Aesthetics-Oriented Video Generation and Editing”, <i>EDIC research proposal</i>, <span
+                                    style="color:#52c8a3">2022</span>.
+                            </p>
+                        </div>
                     </div>
-                    <div class="w3-col m7 w3-container" style="padding-left: 8px; padding-right: 8px;">
-                        <h4 style="margin-top: 0px;">
-                            Scene relighting with illumination estimation in the latent space on an encoder-decoder
-                            scheme
-                        </h4>
-                        <a href="
+
+                    <div class="w3-container w3-padding-large">
+                        <div class="w3-col m5 w3-container" style="overflow: hidden;">
+                            <a href="https://arxiv.org/abs/2006.02333" style="color: black; text-decoration: none">
+                                <img src="images/8e74911795c5b5ed62bf6a71e5bd4929.jpg" style="width: 100%;"
+                                    class="w3-opacity-min w3-hover-opacity-off">
+                            </a>
+                        </div>
+                        <div class="w3-col m7 w3-container" style="padding-left: 8px; padding-right: 8px;">
+                            <a href="https://arxiv.org/abs/2006.02333" style="color: black; text-decoration: none">
+                                <h4 style="margin-top: 0px;">
+                                    Scene relighting with illumination estimation in the latent space on an
+                                    encoder-decoder
+                                    scheme
+                                </h4>
+                            </a>
+                            <a href="
                     https://arxiv.org/pdf/2006.02333.pdf">
-                            <i class="fa-regular fa-file-pdf w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
-                        <a href="https://arxiv.org/abs/2006.02333"><i
-                                class="ai ai-arxiv w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
-                        <a href="https://raw.githubusercontent.com/martin-ev/2DSceneRelighting/master/slides.pdf"><i
-                                class="fa-regular fa-file-powerpoint w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
-                        <a href="https://github.com/martin-ev/2DSceneRelighting"><i
-                                class="fa-brands fa-github w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
-                        <p style="margin-bottom: 0px;">A. P. Dherse*, <b>M. N. Everaert</b>*, and J. J. Gwizdała*.
-                            “Scene relighting with illumination estimation in the latent space on an encoder-decoder
-                            scheme”, <i>arXiv preprint arXiv:2006.02333</i>, <span style="color:#52c8a3">2020</span>.
-                        </p>
-                        <p style="font-size: 12px; text-align: right; margin-top: 0px;">* equal contribution</p>
+                                <i class="fa-regular fa-file-pdf w3-hover-opacity w3-light-grey w3-xxlarge"></i></a>
+                            <a href="https://arxiv.org/abs/2006.02333"><i
+                                    class="ai ai-arxiv w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                            <a href="https://raw.githubusercontent.com/martin-ev/2DSceneRelighting/master/slides.pdf"><i
+                                    class="fa-regular fa-file-powerpoint w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                            <a href="https://github.com/martin-ev/2DSceneRelighting"><i
+                                    class="fa-brands fa-github w3-hover-opacity w3-light-grey  w3-xxlarge"></i></a>
+                            <p style="margin-bottom: 0px;">A. P. Dherse*, <b>M. N. Everaert</b>*, and J. J. Gwizdała*.
+                                “Scene relighting with illumination estimation in the latent space on an encoder-decoder
+                                scheme”, <i>arXiv preprint arXiv:2006.02333</i>, <span
+                                    style="color:#52c8a3">2020</span>.
+                            </p>
+                            <p style="font-size: 12px; text-align: right; margin-top: 0px;">* equal contribution</p>
 
+                        </div>
                     </div>
                 </div>
 
@@ -516,123 +576,275 @@
 
                         <h2>Academic activities</h2>
 
-                        <div class="w3-padding-large">
 
-                            <h3>Conferences</h3>
+                        <h3>Conferences services</h3>
 
-                            <p>Social media Chair of ICCP <span style="color:#52c8a3">2024</span>: <a
-                                    href="https://x.com/ICCP_conference">@ICCP_conference</a></p>
+                        <button class="collapsible collapsibleright">
+                            <p>Social media Chair of ICCP <span style="color:#52c8a3">2024</span></p>
+                        </button>
+                        <div class="content">
+                            <div class="w3-panel w3-xxlarge w3-center">
+                                <a style="color: black;" href="https://x.com/ICCP_conference"><i
+                                        class="fa-brands fa-x-twitter w3-hover-opacity"></i></a>
+                                <a style="color: black;" href="https://www.youtube.com/@iccp-conference/community"><i
+                                        class="fa-brands fa-youtube w3-hover-opacity"></i></a>
+                                <a style="color: black;" href="https://www.facebook.com/ieeeiccp/"><i
+                                        class="fa-brands fa-facebook w3-hover-opacity"></i></a>
+                                <p>Check out <a href="https://iccp2024.iccp-conference.org/">ICCP <span
+                                            style="color:#52c8a3">2024</span> website</a></p>
+                            </div>
+                        </div>
+
+                        <button class="collapsible collapsibleright">
+                            <p>Reviewer and/or emergency reviewer for ICCV <span style="color:#52c8a3">2023</span>,
+                                BMVC <span style="color:#52c8a3">2023</span>, ECCV <span
+                                    style="color:#52c8a3">2024</span>, and NeurIPS <span
+                                    style="color:#52c8a3">2024</span></p>
+                        </button>
+                        <div class="content">
+
+                            <p>Reviewer for NeurIPS <span style="color:#52c8a3">2024</span> (6 reviews, ongoing)
+                            </p>
 
                             <p>Reviewer + emergency reviewer for ECCV <span style="color:#52c8a3">2024</span> (2
-                                reviews, 1 emergency review)</p>
+                                reviews, <a href="https://x.com/EveraertMartin/status/1806280161043575150">1
+                                    emergency review</a>)</p>
 
-                            <p>Emergency reviewer for BMVC <span style="color:#52c8a3">2023</span> (9 emergency reviews)
+                            <p>Emergency reviewer for BMVC <span style="color:#52c8a3">2023</span> (9 emergency
+                                reviews)
                             </p>
 
-                            <p>Reviewer for ICCV <span style="color:#52c8a3">2023</span> (1 review)</p>
+                            <p>Reviewer for ICCV <span style="color:#52c8a3">2023</span> (1
+                                review, 1 emergency review)</p>
 
+                            <p>You can find my name on the <a
+                                    href="https://bmvc2023.org/people/emergency-reviewers/">BMVC
+                                    <span style="color:#52c8a3">2023</span> emergency reviewers list</a> and on the <a
+                                    href="https://iccv2023.thecvf.com/iccv2023.main.conference.program-38--MTE.php">ICCV
+                                    <span style="color:#52c8a3">2023</span> reviewers list</a>.</p>
                         </div>
 
-                        <div class="w3-padding-large">
+                        <h3>Talks and presentations</h3>
 
-                            <h3>Teaching</h3>
+                        <button class="collapsible collapsibleright">
+                            <p>Orals & Live talks: Public Candidacy Exam (<span style="color:#52c8a3">2022</span>) and
+                                at AI
+                                Tinkerers Lausanne Inaugural Meetup (<span style="color:#52c8a3">2024</span>)</p>
+                        </button>
+                        <div class="content">
+                            <p>AI Tinkerers Lausanne Inaugural Meetup, <span style="color:#52c8a3">June
+                                    2024</span></p>
+                            <p>Public candidacy exam, <span style="color:#52c8a3">2022</span></p>
+                        </div>
+                        <button class="collapsible collapsibleright">
+                            <p>Prerecorded presentations: ICCV <span style="color:#52c8a3">2023</span>, BMVC <span
+                                    style="color:#52c8a3">2023</span>, and WACV <span style="color:#52c8a3">2024</span>
+                            </p>
+                        </button>
+                        <div class="content">
+                            <p>Exploiting the Signal-Leak Bias in Diffusion Models (WACV <span
+                                    style="color:#52c8a3">2024</span>)</p>
+                            <p>VETIM: Expanding the Vocabulary of Text-to-Image Models only with Text (BMVC
+                                <span style="color:#52c8a3">2023</span>)
+                            </p>
+                            <p>Diffusion in Style (ICCV <span style="color:#52c8a3">2023</span>)</p>
+                        </div>
 
-                            <p>Teaching assistant Award from <a href="https://www.epfl.ch/schools/ic/">EPFL School of
-                                    Computer and Communication Sciences (IC)</a>, for teaching excellence,
+                        <button class="collapsible collapsibleright">
+                            <p>Posters: ICCV <span style="color:#52c8a3">2023</span>, BMVC <span
+                                    style="color:#52c8a3">2023</span>, WACV <span style="color:#52c8a3">2024</span>,
+                                EDIC Open House <span style="color:#52c8a3">2024</span></p>
+                        </button>
+                        <div class="content">
+                            <p>(Accepted, to be presented soon) Controlling Style in Diffusion Models through the
+                                Noise,
+                                at ICCP <span style="color:#52c8a3">2024</span></p>
+                            <p>(Accepted, to be presented soon) Controlling Style in Diffusion Models through
+                                Noise,
+                                at ICVSS <span style="color:#52c8a3">2024</span></p>
+                            <p>Image Generation with Diffusion Models, at EDIC Open House <span
+                                    style="color:#52c8a3">2024</span></p>
+                            <p>(Virtually) Exploiting the Signal-Leak Bias in Diffusion Models, at WACV <span
+                                    style="color:#52c8a3">2024</span></p>
+                            <p>VETIM: Expanding the Vocabulary of Text-to-Image Models only with Text, at BMVC
                                 <span style="color:#52c8a3">2023</span>
                             </p>
-
-                            <p>Teaching assistant for <a
-                                    href="https://edu.epfl.ch/coursebook/en/computational-photography-CS-413">CS-413:
-                                    Computational Photography</a>, taught by Prof. Sabine Süsstrunk: <span
-                                    style="color:#52c8a3">Spring 2022</span>,
-                                <span style="color:#52c8a3">Spring 2023</span>,
-                                <span style="color:#52c8a3">Spring 2024</span>
-                            </p>
-
-                            <p>Teaching assistant for <a href="https://rgl.epfl.ch/courses/NMVC21">CS-328: Numerical
-                                    Methods for Visual Computing and Machine Learning</a>, taught by Prof. Wenzel
-                                Jakob: <span style="color:#52c8a3">Fall 2021</span>, <span style="color:#52c8a3">Fall
-                                    2023</span></p>
-
+                            <p>Diffusion in Style, at ICCV <span style="color:#52c8a3">2023</span></p>
                         </div>
 
-                        <div class="w3-padding-large">
+                        <h3>Awards</h3>
 
-                            <h3>Student supervision</h3>
+                        <p><a href="https://x.com/EveraertMartin/status/1740833896349282614">Teaching assistant
+                                Award</a> from <a href="https://www.epfl.ch/schools/ic/">EPFL School
+                                of
+                                Computer and Communication Sciences (IC)</a> for teaching excellence (<span
+                                style="color:#52c8a3">2023</span>)
+                        </p>
+                        <p> <a
+                                href="hhttps://www.epfl.ch/education/phd/edic-computer-and-communication-sciences/edic-for-phd-students/">EDIC
+                                PhD fellowship</a> (<span style="color:#52c8a3">2021</span>)
+                        </p>
 
-                            <p>Project ideas designed by me. Projects carried out by BS or MS students:
-                            </p>
+                        <h3>Teaching and student supervisions</h3>
+                        <h4>Teaching assistant (TA)</h4>
+                        <p>Teaching assistant for <a
+                                href="https://edu.epfl.ch/coursebook/en/computational-photography-CS-413">CS-413:
+                                Computational Photography</a>, taught by Prof. Sabine Süsstrunk: <span
+                                style="color:#52c8a3">Spring 2022</span>,
+                            <span style="color:#52c8a3">Spring 2023</span> (<a
+                                href="https://x.com/EveraertMartin/status/1740833896349282614">TA Award</a>!),
+                            <span style="color:#52c8a3">Spring 2024</span>
+                        </p>
 
+                        <p>Teaching assistant for <a href="https://rgl.epfl.ch/courses/NMVC21">CS-328:
+                                Numerical
+                                Methods for Visual Computing and Machine Learning</a>, taught by Prof.
+                            Wenzel
+                            Jakob: <span style="color:#52c8a3">Fall 2021</span>, <span style="color:#52c8a3">Fall
+                                2023</span></p>
+                        <h4>Supervision of MS and BS students</h4>
+
+                        <button class="collapsible collapsibleright">
+                            <p>Semester/research projects: Project ideas designed by me, projects
+                                carried
+                                out by BS or MS students</p>
+                        </button>
+                        <div class="content">
                             <ul class="w3-left-align w3-padding">
                                 <li>
-                                    <p>1 BS student. “Feed-Forward Guidance for Text-to-Image Diffusion Models”,
-                                        Bachelor semester project, <span style="color:#52c8a3">Fall 2023
-                                        </span>, <a href="https://www.epfl.ch/labs/ivrl/available-projects/">project
+                                    <p>1 MS student. “Using Large Language Models (LLMs) as
+                                        Diffusion
+                                        Models for Image Generation”,
+                                        Master research project, <span style="color:#52c8a3">Spring
+                                            2024</span>, <a
+                                            href="https://www.epfl.ch/labs/ivrl/available-projects-2024-spring/">project
+                                            description</a>, co-supervised with <a
+                                            href="https://dongqing-wang.com/">Dongqing Wang</a>.</p>
+                                </li>
+                                <li>
+                                    <p>1 BS student. “Exploring the Benefits of 2D Gaussian
+                                        Splatting in
+                                        Image Representation and Compression”,
+                                        Bachelor research project, <span style="color:#52c8a3">Spring
+                                            2024</span>, <a
+                                            href="https://www.epfl.ch/labs/ivrl/available-projects-2024-spring/">project
                                             description</a>.</p>
                                 </li>
                                 <li>
-                                    <p>1 MS student. “Generating stories from keywords”, Master semester project,
+                                    <p>1 BS student. “Feed-Forward Guidance for Text-to-Image
+                                        Diffusion
+                                        Models”,
+                                        Bachelor research project, <span style="color:#52c8a3">Fall
+                                            2023</span>, <a
+                                            href="https://www.epfl.ch/labs/ivrl/available-projects-fall-2023/">project
+                                            description</a>.</p>
+                                </li>
+                                <li>
+                                    <p>1 MS student. “Generating stories from keywords”, Master
+                                        semester
+                                        project,
                                         <span style="color:#52c8a3">Spring 2023</span>, <a
                                             href="https://www.epfl.ch/labs/ivrl/available-projects-spring2023/">project
                                             description</a>.
                                     </p>
                                 </li>
                                 <li>
-                                    <p>1 BS student. “Coreference resolution for story visualization”, Bachelor
-                                        semester project, <span style="color:#52c8a3">Spring 2023</span>, <a
+                                    <p>1 BS student. “Coreference resolution for story
+                                        visualization”,
+                                        Bachelor
+                                        semester project, <span style="color:#52c8a3">Spring
+                                            2023</span>, <a
                                             href="https://www.epfl.ch/labs/ivrl/available-projects-spring2023/">project
                                             description</a>.</p>
                                 </li>
                                 <li>
-                                    <p>1 team of 3 MS students. “Aesthetics of sets of images”, CS-413 project,
-                                        <span style="color:#52c8a3">Spring 2023</span>.
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>1 team of 3 MS students + 1 team of 2 MS students. “TimeWarp: How would this
-                                        scene look in 100 years?”, CS-413 project, <span style="color:#52c8a3">Spring
-                                            2023</span>.</p>
-                                </li>
-                                <li>
-                                    <p>2 teams of 3 MS students. “Text to Photomosaic”, CS-413 project,
-                                        <span style="color:#52c8a3">Spring 2023</span>.
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>1 team of 3 MS students. “From RGB to NIR with Style Transfer”, CS-413
-                                        project,
-                                        <span style="color:#52c8a3">Spring 2023</span>.
-                                    </p>
-                                </li>
-                                <li>
                                     <p>1 MS student. “Generate images from texts”, Master
-                                        semester project, <span style="color:#52c8a3">Fall 2022</span>, <a
-                                            href="https://www.epfl.ch/labs/ivrl/available-projects-fall-2022/">project
-                                            description</a>.</p>
+                                        semester project, <span style="color:#52c8a3">Fall
+                                            2022</span>,
+                                        <a href="https://www.epfl.ch/labs/ivrl/available-projects-fall-2022/">project
+                                            description</a>.
+                                    </p>
                                 </li>
                                 <li>
                                     <p>1 BS student. “Is this video an ad?”, Bachelor
-                                        semester project, <span style="color:#52c8a3">Fall 2022</span>, <a
-                                            href="https://www.epfl.ch/labs/ivrl/available-projects-fall-2022/">project
-                                            description</a>.</p>
+                                        semester project, <span style="color:#52c8a3">Fall
+                                            2022</span>,
+                                        <a href="https://www.epfl.ch/labs/ivrl/available-projects-fall-2022/">project
+                                            description</a>.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <button class="collapsible collapsibleright">
+                            <p>Computational Photography projects: Project ideas designed by me,
+                                projects
+                                carried out by MS students</p>
+                        </button>
+                        <div class="content">
+                            <ul class="w3-left-align w3-padding">
+                                <li>
+                                    <p>1 team of 3 MS students + 1 team of 2 MS & 1 PhD students. “360°-photography:
+                                        Stitching dual fish-eye images”,
+                                        <span style="color:#52c8a3">Spring 2024</span>.
+                                    </p>
                                 </li>
                                 <li>
-                                    <p>1 team of 3 MS students. "Predicting if two frames are part of the same
-                                        video",
-                                        ML4Science project, <span style="color:#52c8a3">Fall 2022</span>.</p>
+                                    <p>1 team of 3 MS students. “Computational photography with smartphone lenses”,
+                                        <span style="color:#52c8a3">Spring 2024</span>.
+                                    </p>
                                 </li>
                                 <li>
-                                    <p>1 team of 3 MS students. “Improving an open-source microscope by adding
-                                        multispectral imagery”, CS-413 project,
+                                    <p>1 team of 3 MS students. “Automatic and Personalized Tunnel Book Generation from
+                                        Photographs”,
+                                        <span style="color:#52c8a3">Spring 2024</span>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>1 team of 1 MS student. “2D Gaussian Splatting for Image Representation and
+                                        Compression & Text to 2D Gaussian Splatting”,
+                                        <span style="color:#52c8a3">Spring 2024</span>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>1 team of 3 MS students. “Aesthetics of sets of images”,
+                                        <span style="color:#52c8a3">Spring 2023</span>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>1 team of 3 MS students + 1 team of 2 MS students. “TimeWarp:
+                                        How
+                                        would this
+                                        scene look in 100 years?”, <span style="color:#52c8a3">Spring
+                                            2023</span>.</p>
+                                </li>
+                                <li>
+                                    <p>2 teams of 3 MS students. “Text to Photomosaic”,
+                                        <span style="color:#52c8a3">Spring 2023</span>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>1 team of 3 MS students. “From RGB to NIR with Style
+                                        Transfer”,
+                                        <span style="color:#52c8a3">Spring 2023</span>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>1 team of 3 MS students. “Improving an open-source microscope
+                                        by
+                                        adding
+                                        multispectral imagery”,
                                         <span style="color:#52c8a3">Spring 2022</span>, <a
                                             href="files/CS413_2022_Martin.pdf">project
                                             description</a>.
                                     </p>
                                 </li>
                                 <li>
-                                    <p>2 teams of 3 MS students. “Low-level image transformations for image
-                                        aesthetics”, CS-413 project,
+                                    <p>2 teams of 3 MS students. “Low-level image transformations
+                                        for
+                                        image
+                                        aesthetics”,
                                         <span style="color:#52c8a3">Spring 2022</span>, <a
                                             href="files/CS413_2022_Martin.pdf">project
                                             description</a>.
@@ -640,9 +852,23 @@
                                 </li>
 
                             </ul>
+
+
                         </div>
+                        <button class="collapsible collapsiblecenter collapsible28">
+                        </button>
+                        <div class="content">
 
-
+                            <ul class="w3-left-align w3-padding">
+                                <li>
+                                    <p>1 team of 3 MS students. "Predicting if two frames are part of
+                                        the same
+                                        video",
+                                        ML4Science project, <span style="color:#52c8a3">Fall
+                                            2022</span>.</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="w3-col m2 w3-hide-small">
                         <hr>
@@ -651,12 +877,12 @@
             </div>
         </div>
         <!-- End page content -->
-    </div>
 
-    <!-- Footer -->
-    <div class="w3-black w3-center w3-padding-24">Martin Nicolas Everaert<br> Designed with <a
-            href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
-            class="w3-hover-opacity">w3.css</a></div>
+        <!-- Footer -->
+        <div class="w3-black w3-center w3-padding-24">Martin Nicolas Everaert<br> Designed with <a
+                href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+                class="w3-hover-opacity">w3.css</a></div>
+    </div>
 
     <script>
         // Script to open and close sidebar
