@@ -1,0 +1,17 @@
+#field{position:fixed;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+
+.diffusion-timestep{display:inline-flex;align-items:center;gap:.5rem;padding:.42rem .9rem;border-radius:999px;
+  font-size:var(--fs-base);font-weight:400;color:var(--ink);border:1.5px solid var(--rule-strong);
+  background:none;cursor:pointer;transition:all .25s;font-variant-numeric:tabular-nums}
+.diffusion-timestep:hover{color:var(--accent);border-color:var(--accent)}
+.diffusion-timestep #playIcon{font-size:.95em}
+.diffusion-timestep .diffusion-timestep-label{font-family:var(--sans);font-size:var(--fs-base)}
+.diffusion-timestep #tval{display:inline-block;min-width:2.4ch;text-align:right}
+.diffusion-timestep .zen-ico{font-size:1.3em;line-height:1}
+.diffusion-timestep.active{color:var(--accent);border-color:var(--accent)}
+.menu .diffusion-timestep{width:100%;justify-content:flex-start}
+
+body.zen .wrap, body.zen footer{visibility:hidden}
+body.zen .identity{opacity:0;pointer-events:none}
+body.zen .nav-inline{display:none}
+body.zen .topbar{background:transparent;border-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}

@@ -3,36 +3,52 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>document.documentElement.className += ' js';</script>
+    <meta name="robots" content="noindex">
+    <meta property="og:locale" content="en-US">
+    <meta property="og:site_name" content="Martin Nicolas Everaert">
+    <meta property="og:title" content="Page not found — Martin Nicolas Everaert">
+    <meta property="og:type" content="website">
+    <meta name="description" content="The page you are looking for doesn't exist (or doesn't exist yet).">
+
     <title>Page not found &mdash; Martin Nicolas Everaert</title>
     <link rel="icon" href="/images/avatar.jpg">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <style>
-        body {
-            font-family: "Lato", sans-serif;
-            font-weight: 300;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        a:link,
-        a:visited {
-            color: #52adc8;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="icons.css">
+    <link rel="stylesheet" href="diffusion.css">
 </head>
 
-<body class="w3-light-grey w3-content w3-animate-opacity" style="max-width:1000px">
-    <div class="w3-container w3-center w3-padding-64">
-        <img src="/images/avatar.jpg" alt="Martin Nicolas Everaert" style="width:140px" class="w3-circle">
-        <h1><b>404</b></h1>
-        <p>This page doesn't exist (or doesn't exist yet).</p>
-        <p><a href="https://martin-ev.github.io/">&larr; Back to martin-ev.github.io</a></p>
-    </div>
+<body>
+
+    <!-- Animated diffusion background -->
+    <div id="field" aria-hidden="true"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <main class="wrap" id="top">
+
+        <!-- 404 -->
+        <section class="block notfound reveal">
+            <h1 class="nf-code">404</h1>
+            <p class="nf-role">Page not found</p>
+            <p class="nf-msg">This page doesn't exist (or doesn't exist yet). The link may be outdated,
+                or there might be a typo in the address.</p>
+            <p><a class="navpill ghost" href="/"><i class="ci ci-about" aria-hidden="true"></i>Back to home</a></p>
+        </section>
+
+        <!-- End page content -->
+    </main>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="diffusion.js"></script>
+
 </body>
 
 </html>
