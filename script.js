@@ -15,9 +15,8 @@
 
   const ham=document.getElementById('hamburger'), menu=document.getElementById('menu');
   if(ham&&menu){
-    const bar=menu.parentElement;
-    const close=()=>{menu.classList.remove('open');bar.classList.remove('menu-open');ham.setAttribute('aria-expanded','false');};
-    ham.addEventListener('click',(e)=>{e.stopPropagation();const open=menu.classList.toggle('open');bar.classList.toggle('menu-open',open);ham.setAttribute('aria-expanded',open);});
+    const close=()=>{menu.classList.remove('open');ham.setAttribute('aria-expanded','false');};
+    ham.addEventListener('click',(e)=>{e.stopPropagation();const open=menu.classList.toggle('open');ham.setAttribute('aria-expanded',open);});
     menu.addEventListener('click',(e)=>{ if(e.target.closest('a')) close(); });
     document.addEventListener('click',(e)=>{ if(!menu.contains(e.target)&&!ham.contains(e.target)) close(); });
     const zenBtn=document.getElementById('zenBtn'), zenLab=document.getElementById('zenLab');

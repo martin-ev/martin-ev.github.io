@@ -90,7 +90,6 @@ a:hover{color:var(--accent-deep)}
 .menu-sep{height:1px;background:var(--rule);margin:.3rem 0 .1rem}
 .menu-label{display:block;font-family:var(--sans);font-size:var(--fs-small);
   text-transform:uppercase;color:var(--ink);margin:.2rem 2px -.05rem}
-.bar-right.menu-open .nav-inline{display:none}
 .identity-name,.identity-role{white-space:nowrap}
 [data-collapse].collapsed{display:none}
 .bar-inner.measuring .identity,.bar-inner.measuring .bar-right{flex:0 0 auto}
