@@ -11,7 +11,7 @@
 .diffusion-timestep.active{color:var(--accent);border-color:var(--accent)}
 .menu .diffusion-timestep{width:100%;justify-content:flex-start}
 
-body.zen .wrap, body.zen footer{visibility:hidden}
+body.zen .wrap, body.zen footer, body.zen::before{visibility:hidden}
 body.zen .identity{opacity:0;pointer-events:none}
 body.zen .nav-inline{display:none}
 body.zen .topbar{background:transparent;border-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
