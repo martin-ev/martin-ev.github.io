@@ -76,12 +76,4 @@
       a.setAttribute('href','mailto:'+addr);
     });
   })();
-
-  const els=document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){
-    const io=new IntersectionObserver((ents)=>{
-      ents.forEach((e,i)=>{ if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('in'), Math.min(i,6)*60); io.unobserve(e.target);} });
-    },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
-    els.forEach(el=>io.observe(el));
-  } else { els.forEach(el=>el.classList.add('in')); }
 })();
