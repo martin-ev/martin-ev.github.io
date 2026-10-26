@@ -1,17 +1,20 @@
 (function(){
   const html=document.documentElement;
   const lbs=[...document.querySelectorAll('.lightBtn')], dbs=[...document.querySelectorAll('.darkBtn')];
-  function setTheme(t){
+  // only an explicit click is saved; otherwise the theme follows the system setting
+  function setTheme(t,save){
     const dark=t==='dark';
     if(dark) html.setAttribute('data-theme','dark'); else html.removeAttribute('data-theme');
     lbs.forEach(b=>b.classList.toggle('active',!dark));
     dbs.forEach(b=>b.classList.toggle('active',dark));
-    try{ localStorage.setItem('theme',t); }catch(_){}
+    if(save){ try{ localStorage.setItem('theme',t); }catch(_){} }
   }
-  lbs.forEach(b=>b.addEventListener('click',()=>setTheme('light')));
-  dbs.forEach(b=>b.addEventListener('click',()=>setTheme('dark')));
-  let saved; try{ saved=localStorage.getItem('theme'); }catch(_){}
-  setTheme(saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+  lbs.forEach(b=>b.addEventListener('click',()=>setTheme('light',true)));
+  dbs.forEach(b=>b.addEventListener('click',()=>setTheme('dark',true)));
+  const savedTheme=()=>{ try{ return localStorage.getItem('theme'); }catch(_){ return null; } };
+  const mq=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)');
+  setTheme(savedTheme() || (mq&&mq.matches ? 'dark' : 'light'));
+  if(mq&&mq.addEventListener) mq.addEventListener('change',e=>{ if(!savedTheme()) setTheme(e.matches?'dark':'light'); });
 
   const ham=document.getElementById('hamburger'), menu=document.getElementById('menu');
   if(ham&&menu){
@@ -26,7 +29,11 @@
       if(zenLab) zenLab.textContent=on?'Exit zen':'Zen mode';
     };
     if(zenBtn){ zenBtn.addEventListener('click',()=>{ setZen(!document.body.classList.contains('zen')); close(); }); }
-    document.addEventListener('keydown',(e)=>{ if(e.key==='Escape'&&document.body.classList.contains('zen')) setZen(false); });
+    document.addEventListener('keydown',(e)=>{
+      if(e.key!=='Escape') return;
+      if(menu.classList.contains('open')){ close(); ham.focus(); }
+      else if(document.body.classList.contains('zen')) setZen(false);
+    });
     // While in zen mode the content (.wrap) is hidden, so in-page anchor links can't scroll.
     // Intercept them: exit zen first, then scroll to the target section.
     document.addEventListener('click',(e)=>{
