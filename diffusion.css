@@ -7,7 +7,6 @@
 .diffusion-timestep #playIcon{font-size:.95em}
 .diffusion-timestep .diffusion-timestep-label{font-family:var(--sans);font-size:var(--fs-base)}
 .diffusion-timestep #tval{display:inline-block;min-width:2.4ch;text-align:right}
-.diffusion-timestep .zen-ico{font-size:1.3em;line-height:1}
 .diffusion-timestep.active{color:var(--accent);border-color:var(--accent)}
 .menu .diffusion-timestep{width:100%;justify-content:flex-start}
 
