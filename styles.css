@@ -210,6 +210,8 @@ footer .colophon a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 .smallcaps{display:inline-block;text-transform:uppercase;font-size:.74em;font-weight:590;letter-spacing:.03em;font-variation-settings:'WONK' 0,'opsz' 144}
 .smallcaps::first-letter{font-size:1.3514em;font-weight:650}
 .identity-name .smallcaps{font-variation-settings:'WONK' 0}
+/* accent-colored dot on the i: the colour switches in the gap between dot and stem (40.35% down at opsz 144) */
+.idot{color:transparent;background:linear-gradient(var(--accent) 40.35%,var(--ink) 40.35%);-webkit-background-clip:text;background-clip:text}
 
 /* 404 page */
 .notfound{text-align:center;padding:clamp(64px,14vh,140px) 0}
