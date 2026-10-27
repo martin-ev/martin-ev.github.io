@@ -52,7 +52,6 @@ a:hover{color:var(--accent-deep)}
 .identity-photo{width:36px;height:36px;border-radius:50%;object-fit:cover;border:1px solid var(--rule-strong);flex:none}
 .identity-text{display:flex;flex-direction:column;line-height:1.12}
 .identity-name{font-family:var(--serif);font-weight:600;font-size:var(--fs-base);color:var(--ink);}
-.identity-name .smallcaps{font-variant-caps:small-caps}
 .identity-role{font-size:var(--fs-small);color:var(--ink);margin-top:2px}
 .identity:hover{color:var(--ink)}
 .nav-inline{display:flex;align-items:center;gap:.5rem}
@@ -100,7 +99,6 @@ a:hover{color:var(--accent-deep)}
 .intro{position:relative;z-index:2;padding:56px 0 6px;color:var(--ink)}
 .intro > div{max-width:680px}
 .intro h1{font-family:var(--serif);font-weight:600;font-size:var(--fs-display-lg);line-height:1;letter-spacing:-.01em;margin:0 0 18px;color:var(--ink)}
-.intro h1 .smallcaps{font-style:normal;font-variant-caps:small-caps}
 .intro .role{font-family:var(--sans);font-style:normal;font-size:var(--fs-base);line-height:1.4;color:var(--ink);margin:0 0 14px}
 .intro p{margin:0 0 14px;color:var(--ink)}
 .intro a.inline-link{color:var(--accent);border-bottom:1px solid transparent;transition:border-color .2s}
@@ -198,7 +196,6 @@ footer::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none
 [data-theme="dark"] footer::after{opacity:.32}
 footer .wrap{z-index:1}
 footer .fname{font-family:var(--serif);font-weight:600;font-size:2.5rem;line-height:1.1;letter-spacing:-.01em;color:var(--ink)}
-footer .fname .smallcaps{font-style:normal;font-variant-caps:small-caps}
 footer .frow{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:18px 32px;margin-top:22px}
 footer .flinks{display:flex;flex-wrap:wrap;gap:8px}
 footer .flinks a{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.1rem;border-radius:999px;background:none;color:var(--ink);border:1.5px solid var(--rule-strong);font-weight:400;font-size:var(--fs-base);line-height:1;transition:color .2s,border-color .2s}
@@ -207,6 +204,12 @@ footer .colophon{margin-top:38px;padding-top:18px;display:flex;justify-content:s
 footer .colophon em{font-style:normal;color:var(--ink)}
 footer .colophon a{color:var(--accent);border-bottom:1px solid transparent;transition:border-color .2s}
 footer .colophon a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* name: given names light, high-contrast and wonky; surname in hand-drawn small caps
+   (Fraunces has none), heavier than the capital so the strokes match */
+.intro h1,.identity-name,footer .fname{font-weight:530;font-variation-settings:'opsz' 144,'WONK' 1}
+.smallcaps{display:inline-block;text-transform:uppercase;font-size:.74em;font-weight:630;letter-spacing:.03em;font-variation-settings:'WONK' 0}
+.smallcaps::first-letter{font-size:1.3514em;font-weight:560}
 
 /* 404 page */
 .notfound{text-align:center;padding:clamp(64px,14vh,140px) 0}
