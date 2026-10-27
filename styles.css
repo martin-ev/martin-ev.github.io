@@ -205,11 +205,11 @@ footer .colophon em{font-style:normal;color:var(--ink)}
 footer .colophon a{color:var(--accent);border-bottom:1px solid transparent;transition:border-color .2s}
 footer .colophon a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 
-/* name: given names light, high-contrast and wonky; surname in hand-drawn small caps
-   (Fraunces has none), heavier than the capital so the strokes match */
+/* name: light, high-contrast and wonky; surname in hand-drawn small caps (Fraunces has none) */
 .intro h1,.identity-name,footer .fname{font-weight:530;font-variation-settings:'opsz' 144,'WONK' 1}
-.smallcaps{display:inline-block;text-transform:uppercase;font-size:.74em;font-weight:630;letter-spacing:.03em;font-variation-settings:'WONK' 0}
-.smallcaps::first-letter{font-size:1.3514em;font-weight:560}
+.smallcaps{display:inline-block;text-transform:uppercase;font-size:.74em;font-weight:590;letter-spacing:.03em;font-variation-settings:'WONK' 0,'opsz' 144}
+.smallcaps::first-letter{font-size:1.3514em;font-weight:650}
+.identity-name .smallcaps{font-variation-settings:'WONK' 0}
 
 /* 404 page */
 .notfound{text-align:center;padding:clamp(64px,14vh,140px) 0}
