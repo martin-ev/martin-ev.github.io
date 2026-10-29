@@ -75,6 +75,18 @@
     if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   })();
 
+  // the accent i-dots hop once the fonts are in and then every few seconds (big name only), and on hovering any name
+  (function(){
+    const hop=el=>{ el.classList.remove('hop'); void el.offsetWidth; el.classList.add('hop'); };
+    document.querySelectorAll('.intro h1,.identity-name,footer .fname')
+      .forEach(n=>n.addEventListener('pointerenter',()=>hop(n)));
+    const h1=document.querySelector('.intro h1');
+    if(h1) (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(()=>setTimeout(()=>{
+      hop(h1);
+      setInterval(()=>{ if(!document.hidden) hop(h1); },5000);
+    },250));
+  })();
+
   (function(){
     let addr;
     try{ addr=atob(atob('YlhoaGNYSnJkSHBwZDI1aUxtNWxkblpvWldweVoyRm1aV1J5ZEhSeQ==')+atob('UUhCaGJHeHRkV050YzI1NWFYRXVkMlZsY0hKbWRHeDZMbUpqZUdocg==')).replace(/(.)./g,'$1'); }catch(_){ return; }

@@ -211,7 +211,19 @@ footer .colophon a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 .smallcaps::first-letter{font-size:1.3514em;font-weight:550}
 .identity-name .smallcaps{font-variation-settings:'WONK' 0}
 /* accent-colored dot on the i: the colour switches in the gap between dot and stem (40.35% down at opsz 144) */
-.idot{color:transparent;background:linear-gradient(var(--accent) 40.35%,var(--ink) 40.35%);-webkit-background-clip:text;background-clip:text}
+/* the real i keeps only its stem; an overlaid copy keeps only the dot, so the dot can hop on its own */
+.idot{position:relative;color:transparent;background:linear-gradient(transparent 40.35%,var(--ink) 40.35%);-webkit-background-clip:text;background-clip:text}
+.idot::after{content:"i";content:"i"/"";position:absolute;inset:0;line-height:normal;user-select:none;pointer-events:none;
+  background:linear-gradient(var(--accent) 40.35%,transparent 40.35%);-webkit-background-clip:text;background-clip:text;transform-origin:50% 40%}
+.hop .idot::after{animation:hop .9s both}
+.hop .idot~.idot::after{animation-delay:.12s}
+@keyframes hop{
+  20%{transform:translateY(-.3em) scale(.85,1.15)}
+  40%{transform:translateY(-.42em)}
+  60%{transform:translateY(0) scale(1.3,.7)}
+  72%{transform:translateY(-.07em) scale(.95,1.05)}
+  85%{transform:none}
+}
 
 /* 404 page */
 .notfound{text-align:center;padding:clamp(64px,14vh,140px) 0}
