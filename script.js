@@ -75,15 +75,24 @@
     if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   })();
 
-  // the accent i-dots hop once the fonts are in and then every few seconds (big name only), and on hovering any name
+  // the accent i-dots hop one after another (and the o of "About" and s of "News" spin): on hover, and every few seconds for the big name and headings on screen
   (function(){
-    const hop=el=>{ el.classList.remove('hop'); void el.offsetWidth; el.classList.add('hop'); };
-    document.querySelectorAll('.intro h1,.identity-name,footer .fname')
-      .forEach(n=>n.addEventListener('pointerenter',()=>hop(n)));
-    const h1=document.querySelector('.intro h1');
-    if(h1) (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(()=>setTimeout(()=>{
-      hop(h1);
-      setInterval(()=>{ if(!document.hidden) hop(h1); },5000);
+    const hop=el=>{
+      if(el.getAnimations&&el.getAnimations({subtree:true}).some(a=>a.playState==='running')) return;  // let a running one finish
+      el.querySelectorAll('.spin').forEach(s=>s.style.setProperty('--k',(+s.style.getPropertyValue('--k')+1)%2));
+      el.classList.remove('hop'); void el.offsetWidth; el.classList.add('hop');
+    };
+    const hoppers=[...document.querySelectorAll('.intro h1,.identity-name,footer .fname,h2')].filter(n=>n.querySelector('.idot,.spin'));
+    hoppers.forEach(n=>{
+      n.querySelectorAll('.idot').forEach((d,i)=>d.style.setProperty('--n',i));
+      n.addEventListener('pointerenter',()=>hop(n));
+    });
+    const auto=hoppers.filter(n=>n.matches('.intro h1,h2'));
+    const onScreen=el=>{ const r=el.getBoundingClientRect(); return r.bottom>0&&r.top<innerHeight; };
+    const tick=()=>{ if(!document.hidden) auto.filter(onScreen).forEach(hop); };
+    (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(()=>setTimeout(()=>{
+      tick();
+      setInterval(tick,5000);
     },250));
   })();
 
